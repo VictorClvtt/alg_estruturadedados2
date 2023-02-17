@@ -28,6 +28,7 @@ string pesquisa(funcionario funcionarios[]) {
 
     cout << "Deseja fazer outra pesquisa pelos dados com o ddd?" << endl;
     cin >> res;
+    cout << "\033[2J\033[1;1H";
 
     return res;
 }
@@ -40,19 +41,24 @@ int main() {
     for (i = 0; i < 3; i++) {
         cout << "Digite o nome do funcionario numero " << i + 1 << ": ";
         cin >> pessoa[i].nome;
+        cout << "\033[2J\033[1;1H";
 
         cout << "Digite o ddd do funcionario numero " << i + 1 << ": ";
         cin >> pessoa[i].ddd;
+        cout << "\033[2J\033[1;1H";
 
         cout << "Digite o telefone do funcionario numero " << i + 1 << ": ";
         cin >> pessoa[i].tel;
+        cout << "\033[2J\033[1;1H";
 
         cout << "Digite a cidade do funcionario numero " << i + 1 << ": ";
         cin >> pessoa[i].cidade;
+        cout << "\033[2J\033[1;1H";
     }
 
     cout << "Deseja fazer uma pesquisa pelos dados com o ddd?" << endl;
     cin >> r;
+    cout << "\033[2J\033[1;1H";
 
     if (r == "sim" || r == "Sim") {
         do {
