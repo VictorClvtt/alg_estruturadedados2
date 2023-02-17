@@ -37,6 +37,7 @@ int main() {
     funcionario pessoa[3];
     int i, ca;
     string r;
+    string resposta;
 
     for (i = 0; i < 3; i++) {
         cout << "Digite o nome do funcionario numero " << i + 1 << ": ";
@@ -62,8 +63,10 @@ int main() {
 
     if (r == "sim" || r == "Sim") {
         do {
-            pesquisa(pessoa);
-        } while (r != "nao" || r != "Nao");
+            resposta = pesquisa(pessoa);
+        } while (resposta != "nao" && resposta != "Nao");
+
+        cout << "Ok, adeus :)";
     } else if (r == "nao" || r == "Nao") {
         cout << "Ok, adeus :)";
     }
